@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    /*наследовать от родителя*/
+    color: inherit;
+}
+
+.wrapper {
+    overflow: hidden;
+    font-family: 'Comfortaa', sans-serif;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 100vh;
+    max-width: 2500px;
+    padding: 0px 5px;
+    margin: 0 auto;
+    width: 100%;
+    background: url(../img/открытка\ к9\ мая.jpg) no-repeat center/cover;
+    display: flex;
+    align-items: center;
+}
+.container:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 2;
+  }
+
+.hero {
+    padding: 0px 5px;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+
+.hero__content {
+    background-color: brown;
+    display: inline-block;
+    color: black;
+    padding: 50px;
+    border-radius: 150px 150px 150px 150px;
+    animation: shift 3s;
+    border: dashed;
+    box-shadow: 7px 7px 6px 6px rgb(0, 0, 0);
+    animation: shift 3s;
+    position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 50px;  
+
+}
+
+
+@keyframes shift{
+    0%{
+        transform: translateY(-100vw);
+    }
+    50%{
+        transform: scale(0.5)rotateX(180eg);
+
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
